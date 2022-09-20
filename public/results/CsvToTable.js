@@ -79,10 +79,18 @@
 	                    table += '<th>';
 	                    table += rowCells[rowCell];
 	                    table += '</th>';
+					
 	                } else {
-	                    table += '<td>';
-	                    table += rowCells[rowCell];
-	                    table += '</td>';
+						if (rowCell === 6){
+							table += '<td><img src=';
+							table += `"${rowCells[rowCell]}" width = 100px height = 50px`;
+							table += '</img></td>';
+						}
+						else {
+							table += '<td>';
+							table += rowCells[rowCell];
+							table += '</td>';
+						}
 	                }
 	            }
 	            if (singleRow === 0) {
