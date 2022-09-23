@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(248, 112, 0)
+}
+.formframe {
+    color: rgb(248, 112, 0);
+    margin:auto;
+    width: 20%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    display: flex ;
+    align-items: center;
+    flex-direction:  column
+}
+.browsebutton {
+    padding: 20px;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-align: center
+}
+div {
+    padding: 20px;
+}
+.button{
+    align-content: center;
+    /*! display: block; */
+    width: 100%;
+}
+
+input[type=button], input[type=submit] {
+  background-color: #04AA6D;
+  font-family: sans-serif;
+  font-size: 15px;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+}
+input[type=file]{
+    display: none;
+}
+.buttonfileupload{
+    display: block;
+    padding: 6px 12px;
+    cursor: pointer;
+    color:white;
+    background-color: #04AA6D;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-align: ;
+}
+form {
+    /*! padding: 20px; */ 
+    /*! margin: 20px; */
+    /*! display: block; */
+    width: 100%;
+    text-align: center;
+}
+label.buttonfileupload{
+    
+    padding: 20px;
+}
+div.browseform{
+    display: block;
+    width: 100%;
+}

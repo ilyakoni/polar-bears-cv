@@ -1,13 +1,13 @@
-let express = require('express');
-let fileUpload = require('express-fileupload');
+
+const express = require('express');
 let app = express();
-let fs = require('fs')
+const fs = require('fs')
+const multer = require('multer')
 
 
-app.use(fileUpload({}));
+
 
 app.use('/',express.static(__dirname + '/public'));
-
 
 //index страница
 app.get('/', function (req, res) {
@@ -16,22 +16,13 @@ app.get('/', function (req, res) {
 
 
 // Отрисовка формы загрузки сайта
-app.get('/form', function (req, res) {
-    res.setHeader('content-type', 'text/html;charset=utf-8');
-    res.write('<form action="/upload" method="POST" enctype="multipart/form-data" >');
-    res.write('<input type="file" name="dataset">');
-    res.write('<input type="submit">');
-    res.write('</form>');
-    res.end();
-})
 
-
+path = __dirname+'/public/results/upload';
+const upload = multer({dest:path})
+console.log(path)
 //POST клиента датасета на сервер
-app.post('/upload', function(req, res) {
-    req.files.dataset.mv(__dirname+'/public/results/data.csv');
+app.post('/upload',upload.any('photos'), function(req, res) {
     res.redirect('/results')
-    console.log(req.files.dataset); // the uploaded file object
-
 });
 
 

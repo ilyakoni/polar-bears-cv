@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+    <div class="formframe">
+       <div class="browseform">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label class="buttonfileupload">
+                <input class="browsebutton" type="file" name="dataset[]" multiple>
+                Выбрать файл(ы)
+            </label>
+        </div>
+        <div class="button"><input value="Обработать файл(ы)" type="submit"></div>
+    </form>
+    </div>
+    </body>
+</html>
