@@ -1,8 +1,6 @@
-body{
-    background-color: rgb(248, 112, 0)
-}
+
 .formframe {
-    color: rgb(248, 112, 0);
+    /*! color: rgb(248, 112, 0); */
     margin:auto;
     width: 20%;
     transform: translate(-50%, -50%);
@@ -31,42 +29,89 @@ div {
 }
 
 input[type=button], input[type=submit] {
-  background-color: #04AA6D;
+  background-color: #FFF;
   font-family: sans-serif;
   font-size: 15px;
-  border: none;
-  color: white;
+  color: #00abff;
   padding: 20px;
-  text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
   width: 100%;
+  border-color: #00abff;
+  border-radius: 15px;
+  border-width: 10px;
 }
 input[type=file]{
     display: none;
 }
-.buttonfileupload{
-    display: block;
-    padding: 6px 12px;
-    cursor: pointer;
-    color:white;
-    background-color: #04AA6D;
+label.buttonfileupload{
+    display: flex;
+    background-color: #00abff;
     font-family: sans-serif;
     font-size: 15px;
-    text-align: ;
+    color: #ffffff;
+    padding: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+    border-color: #00abff; 
+    border-radius: 15px; 
+    border-width: 10px; 
+}
+label.buttonfileupload:hover{
+    display: block;
+    background-color: #feffff;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #00abff;
+    padding: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+    border-color: #00abff; 
+    border-radius: 15px; 
+    border-width: 10px; 
 }
 form {
     /*! padding: 20px; */ 
     /*! margin: 20px; */
     /*! display: block; */
+    /*! width: 100%; */
+    /*! text-align: center; */
+    background-color: #FFF;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #00abff;
+    padding: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
     width: 100%;
+    border-color: #00abff;
+    border-radius: 15px;
+    border-width: 10px;
+    display: flex;
+    align-content: center;
     text-align: center;
 }
 label.buttonfileupload{
     
     padding: 20px;
+    display: block;
+    /*! text-align: center; */
+    align-content: center;
 }
 div.browseform{
-    display: block;
+    display: flex;
     width: 100%;
+    background-color: #FFF;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #00abff;
+    padding: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+    border-color: #00abff;
+    border-radius: 15px;
+    border-width: 10px;
 }
