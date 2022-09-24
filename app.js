@@ -20,7 +20,7 @@ app.post('/upload',upload.any('photos'), function(req, res) {
     res.redirect('/results')
 });
 app.get('/results', function(req, res){
-    res.write('<link rel="stylesheet" href="style.css">')
+    res.write('<link rel="stylesheet" href="style.css"><script src="script.js"></script>')
     console.log('hello')
     fs.readdir(__dirname+'/public/results/upload', function(err, files) {
         if (err) throw err;
@@ -35,8 +35,12 @@ app.get('/results', function(req, res){
 
     function showImages(images) {
         for (i = 0; i < images.length; i++) {
-            res.write(`<div class='imageContainer'><a target="_blank" href='/results/upload/${images[i]}' type="image"><img width=512px height=512px src='/results/upload/${images[i]}' /></a></div>`);
+            res.write(`<div class='imageContainer'><a target="_blank" href='/results/upload/${images[i]}' type="image"><img width=512px height=512px src='/results/upload/${images[i]}' align=bottom></a><p>${__dirname+'results/upload/'+images[i]}</p></div>`);
         }
+        
+        for (i=0; i<images.length;i++){
+            res.write(`<script type="text/javascript">magnify(5,${i})</script>`)
+    }
         res.end();
     }
 }
