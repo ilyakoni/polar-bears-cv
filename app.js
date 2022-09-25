@@ -18,14 +18,14 @@ console.log(path)
 
 //POST метод после вызова  /upload
 app.post('/upload',upload.any('photos'), function(req, res) {
-    spawnSync('python', ['child_process.py'])
+    spawnSync('python', ['public/results/child_process.py'])
     res.redirect('/results')
 });
 app.get('/results', function(req, res){
     res.write(`<meta charset="utf-8"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><link rel="stylesheet" href="style.css"> <script src="script.js"></script><link rel="stylesheet" href="/results/bootstrap-magnify/css/bootstrap-magnify.css"> `)
     console.log('hello')
-    fs.readdir(__dirname+'/public/results/upload', function(err, files) {
+    fs.readdir(__dirname+'/public/results/AppTest/first', function(err, files) {
         if (err) throw err;
         var results = [];
 
@@ -40,7 +40,7 @@ app.get('/results', function(req, res){
         res.write('<table class="table table-image"><tr><th scope="col">id</th><th scope="col">Изображение</th><th scope="col">Путь</th></tr>')
         for (i = 0; i < images.length; i++) {
             
-            res.write(`<th scope="row">${i}</th><td><div class='imageContainer'><a target="_blank" href='/results/upload/${images[i]}' type="image"><img data-toggle="magnify" class="img-fluid img-thumbnail" src="/results/upload/${images[i]}"/></a></td><td><p>${__dirname+'/results/upload/'+images[i]}</p></div></td></tr>`);
+            res.write(`<th scope="row">${i}</th><td><div class='imageContainer'><a target="_blank" href='/results/AppTest/first/${images[i]}' type="image"><img data-toggle="magnify" class="img-fluid img-thumbnail" src="/results/AppTest/first/${images[i]}"/></a></td><td><p>${__dirname+'/results/AppTest/first/'+images[i]}</p></div></td></tr>`);
 
         }
         
