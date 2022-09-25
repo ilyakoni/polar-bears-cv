@@ -1,0 +1,13 @@
+{
+  "name": "cv-web-app",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "ilyakoni <ilyakoni@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ilyakoni/cv-web-app",
+  "dependencies": {
+    "bootstrap-magnify": "^0.3.0"
+  }
+}
